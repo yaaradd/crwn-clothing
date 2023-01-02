@@ -32,6 +32,7 @@ const firebaseConfig = {
 
 export const auth = getAuth();
 export const signInwithGooglePopup = () => signInWithPopup(auth, provider);
+export const signInWithGoogleRedirect = () => signInWithRedirect(auth, provider);
 
 export const db = getFirestore()
 
