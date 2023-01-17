@@ -3,14 +3,8 @@ import { Routes, Route, Outlet} from "react-router-dom";
 import Home from "./routs/home/home.component";
 import Navigation from "./routs/navigation/navigation.component";
 import Authentication from "./routs/authentication/authentication";
+import Shop from "./routs/shop/shop.component";
 
-const Shop = () => {
-  return(
-    <div>
-      <h1>SHOP</h1>
-    </div>
-  )
-}
 
 
 const App = () => {
