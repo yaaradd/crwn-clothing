@@ -8,6 +8,7 @@ import { signOutUser } from "../../utils/firebase/firbase.utils";
 
 import CartIcon from "../../components/cart-icon/cart-icon.component";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
+import { CartContext } from "../../contexts/cart.context";
 
 import './navigation.styles.scss'
 
@@ -15,6 +16,7 @@ import './navigation.styles.scss'
 const Navigation = () => {
 
     const { currentUser } = useContext(UserContext);
+    const { isCartOpen } = useContext(CartContext);
 
 
     return (
@@ -36,11 +38,11 @@ const Navigation = () => {
                     )}
                     <CartIcon/>
                 </div>
-                <CartDropdown/>
+                {isCartOpen && <CartDropdown/>}
             </div>
             <Outlet />
         </Fragment>
     );
   };
 
-  export default Navigation
+  export default Navigation;
